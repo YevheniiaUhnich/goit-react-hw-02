@@ -1,0 +1,43 @@
+.feedbackBox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.title {
+  font-size: 45px;
+  font-weight: 600;
+  color: black;
+  margin: 0;
+}
+
+.text {
+  font-size: 24px;
+  color: black;
+  font-weight: 400;
+}
+
+.button {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  width: 100px;
+  border-radius: 8px;
+  border: 1px solid grey;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  background-color: #ece9e9;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #47474b;
+}
+button:focus,
+button:focus-visible {
+  outline: 2px auto gray;
+}
