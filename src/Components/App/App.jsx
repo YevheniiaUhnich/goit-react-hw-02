@@ -53,7 +53,10 @@ const App = () => {
           positiveFeedback={positiveFeedback}
         />
       ) : (
-        <Notification message="No feedback yet." />
+        <Notification
+          className={s.messageNotification}
+          message="No feedback yet."
+        />
       )}
     </div>
   );
