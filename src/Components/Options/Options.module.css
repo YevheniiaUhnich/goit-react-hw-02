@@ -15,10 +15,10 @@
   transition: border-color 0.25s;
 }
 
-button:hover {
+.btn:hover {
   border-color: #47474b;
 }
-button:focus,
-button:focus-visible {
+.btn:focus,
+.btn:focus-visible {
   outline: 2px auto gray;
 }
