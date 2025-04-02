@@ -50,7 +50,7 @@ const App = () => {
           positiveFeedback={positiveFeedback}
         />
       ) : (
-        <Notification message="No feedback given yet." />
+        <Notification message="No feedback yet." />
       )}
     </>
   );
