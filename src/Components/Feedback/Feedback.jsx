@@ -1,18 +1,15 @@
 import s from "./Feedback.module.css";
 
-const Feedback = () => {
+const Feedback = ({ good, neutral, bad, totalFeedback, positiveFeedback }) => {
   return (
-    <div className={s.feedbackBox}>
-      <h1 className={s.title}>Sip Happens Café</h1>
-      <p className={s.text}>
-        Please leave your feedback about our service by selecting one of the
-        options below.
-      </p>
-      <div className={s.button}>
-        <button className={s.btn}>Good</button>
-        <button className={s.btn}>Neutral</button>
-        <button className={s.btn}>Bad</button>
-      </div>
+    <div>
+      <ul className={s.list}>
+        <li>Good: {good}</li>
+        <li>Neutral: {neutral}</li>
+        <li>Bad: {bad}</li>
+        <li>Total: {totalFeedback}</li>
+        <li>Positive: {positiveFeedback}%</li>
+      </ul>
     </div>
   );
 };

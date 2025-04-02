@@ -1,25 +1,22 @@
-import { useState } from "react";
 import s from "./Options.module.css";
 
-const Options = () => {
-  const [optionData, setOptionData] = useState({
-    good: 0,
-    neutral: 0,
-    bad: 0,
-  });
-  const updateFeedback = (feedbackType) => {
-    setOptionData({
-      ...optionData,
-      [feedbackType]: optionData[feedbackType] + 1,
-    });
-  };
+const Options = ({ updateFeedback, resetFeedback, totalFeedback }) => {
   return (
-    <div>
-      <ul className={s.list}>
-        <li>good: {optionData.good}</li>
-        <li>neutral: {optionData.neutral}</li>
-        <li>bad: {optionData.bad}</li>
-      </ul>
+    <div className={s.button}>
+      <button onClick={() => updateFeedback("good")} className={s.btn}>
+        Good
+      </button>
+      <button onClick={() => updateFeedback("neutral")} className={s.btn}>
+        Neutral
+      </button>
+      <button onClick={() => updateFeedback("bad")} className={s.btn}>
+        Bad
+      </button>
+      {totalFeedback > 0 && (
+        <button onClick={() => resetFeedback("reset")} className={s.btn}>
+          Reset
+        </button>
+      )}
     </div>
   );
 };
