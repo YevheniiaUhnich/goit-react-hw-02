@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import "./App.css";
-import Feedback from "./Components/Feedback/Feedback";
-import Options from "./Components/Options/Options";
-import Notification from "./Components/Notification/Notification";
-import Description from "./Components/Description/Description";
+import Feedback from "../Feedback/Feedback";
+import Options from "../Options/Options";
+import Notification from "../Notification/Notification";
+import Description from "../Description/Description";
 
 const App = () => {
   const [feedback, setFeedback] = useState(() => {
